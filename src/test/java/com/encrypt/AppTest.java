@@ -1,4 +1,4 @@
-package com.encrypt.rsa;
+package com.encrypt;
 
 import static org.junit.Assert.assertTrue;
 
