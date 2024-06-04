@@ -24,6 +24,6 @@ public class Rsa {
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(2, privateKey);
         byte[] decryptedRsa = cipher.doFinal(cipherText);
-        return Base64.getEncoder().encodeToString(decryptedRsa);
+        return new String(decryptedRsa);
     }
 }
