@@ -16,7 +16,6 @@
       <url>https://maven.pkg.github.com/Antony1415/maven-depedency-demo</url>
     </repository>
  </distributionManagement>
- 
 
   <name>com.encrypt.rsa</name>
   <!-- FIXME change it to the project's website -->

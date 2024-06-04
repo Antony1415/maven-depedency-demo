@@ -5,11 +5,9 @@ import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import javax.crypto.Cipher;
+import java.util.Base64;
 
 public class Rsa {
-    public Rsa() {
-    }
-
     public static KeyPair generateRsaKeyPair() throws Exception {
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
         keyPairGenerator.initialize(2048);
@@ -26,6 +24,6 @@ public class Rsa {
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(2, privateKey);
         byte[] decryptedRsa = cipher.doFinal(cipherText);
-        return new String(decryptedRsa);
+        return Base64.getEncoder().encodeToString(decryptedRsa);
     }
 }

@@ -5,9 +5,6 @@ import java.security.MessageDigest;
 public class Sha256 {
     private static MessageDigest digest;
 
-    public Sha256() {
-    }
-
     public static MessageDigest getInstance() throws Exception {
         if (digest == null) {
             digest = MessageDigest.getInstance("SHA-256");
