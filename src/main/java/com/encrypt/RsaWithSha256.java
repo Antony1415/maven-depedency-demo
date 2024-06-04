@@ -23,7 +23,7 @@ public class RsaWithSha256 {
         return Base64.getEncoder().encodeToString(signatureBytes);
     }
 
-    public static boolean Verify(String message, String signatureMessage, PublicKey publicKey) throws Exception {
+    public static boolean verify(String message, String signatureMessage, PublicKey publicKey) throws Exception {
         Signature signature = getInstance();
         signature.initVerify(publicKey);
         signature.update(message.getBytes());

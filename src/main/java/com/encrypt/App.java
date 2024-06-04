@@ -28,7 +28,7 @@ public class App {
 
 
         String encryptedTextSignature = RsaWithSha256.sign(message, privateKey);
-        boolean checkSignature = RsaWithSha256.Verify(message, encryptedTextSignature, publicKey);
+        boolean checkSignature = RsaWithSha256.verify(message, encryptedTextSignature, publicKey);
         System.out.println("\nUsing Signature Library (Hash & Rsa handle by Signature)");
         System.out.println("\nEncrypted Message SHA-256 with RSA : " + encryptedTextSignature);
         System.out.println("Check equals message : " + checkSignature);
